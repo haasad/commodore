@@ -11,7 +11,7 @@ include = [
     "commodore/component-template/**/*",
     "commodore/lib/commodore.libjsonnet",
     "commodore/filters/helm_namespace.jsonnet",
-    "commodore/helm_bindings/*"
+    "commodore/helm_bindings/**/*"
 ]
 
 [tool.poetry.dependencies]

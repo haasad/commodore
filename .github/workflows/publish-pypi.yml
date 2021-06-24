@@ -25,9 +25,10 @@ jobs:
         run: |
           bash $(poetry env info -p)/lib/python3.8/site-packages/kapitan/inputs/helm/build.sh
           bash $(poetry env info -p)/lib/python3.8/site-packages/kapitan/dependency_manager/helm/build.sh
-          mkdir -p commodore/helm_bindings
-          cp $(poetry env info -p)/lib/python3.8/site-packages/kapitan/inputs/helm/{helm_binding.py,libtemplate.so} commodore/helm_bindings
-          cp $(poetry env info -p)/lib/python3.8/site-packages/kapitan/dependency_manager/helm/{helm_fetch_binding.py,helm_fetch.so} commodore/helm_bindings
+          mkdir -p commodore/helm_bindings/inputs
+          mkdir -p commodore/helm_bindings/dependency_manager
+          cp $(poetry env info -p)/lib/python3.8/site-packages/kapitan/inputs/helm/{helm_binding.py,libtemplate.so} commodore/helm_bindings/inputs
+          cp $(poetry env info -p)/lib/python3.8/site-packages/kapitan/dependency_manager/helm/{helm_fetch_binding.py,helm_fetch.so} commodore/helm_bindings/dependency_manager
       - name: build commodore
         run: poetry build
       - name: publish to pypi
