@@ -20,4 +20,6 @@ jobs:
       - name: build commodore
         run: poetry build
       - name: publish to pypi
-        run: poetry publish -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }} -r https://test.pypi.org/legacy/
+        run: |
+          poetry config repositories.pypi_test https://test.pypi.org/legacy/
+          poetry publish -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }} -r pypi_test
