@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "syn-commodore"
-version = "v0.0.1"
+version = "v0.0.2"
 description = "Commodore provides opinionated tenant-aware management of Kapitan inventories and templates. Commodore uses Kapitan for the heavy lifting of rendering templates and resolving a hierachical configuration structure."
 authors = ["VSHN AG <info@vshn.ch>"]
 license = "BSD-3-Clause"
