@@ -23,7 +23,9 @@ jobs:
           sudo apt install golang-1.14-go -y
       - name: build helm bindings
         run: |
-          bash "${VIRTUAL_ENV}/lib/python3.8/site-packages/kapitan/dependency_manager/helm/build.sh"
+          bash "$(poetry env info -p)/lib/python3.8/site-packages/kapitan/inputs/helm/build.sh"
+          bash "$(poetry env info -p)/lib/python3.8/site-packages/kapitan/dependency_manager/helm/build.sh"
+
       - name: build commodore
         run: poetry build
       - name: publish to pypi
