@@ -1,10 +1,12 @@
 [tool.poetry]
 name = "syn-commodore"
-version = "v0.0.7"
+version = "v0.0.8"
 description = "Commodore provides opinionated tenant-aware management of Kapitan inventories and templates. Commodore uses Kapitan for the heavy lifting of rendering templates and resolving a hierachical configuration structure."
 readme = "README.md"
 authors = ["VSHN AG <info@vshn.ch>"]
 license = "BSD-3-Clause"
+homepage = "https://github.com/projectsyn/commodore"
+documentation = "https://syn.tools/commodore/index.html"
 packages = [
     {include = "commodore"}
 ]
